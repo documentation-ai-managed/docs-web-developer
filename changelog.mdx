@@ -1,0 +1,131 @@
+---
+title: Changelog
+description: Stay updated with the latest releases, new features, and improvements in Web Developer.
+---
+
+## Recent Releases
+
+Check the latest updates below to see what's new in Web Developer. Each release includes new features, bug fixes, and improvements to enhance your documentation workflow.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams, allowing multiple users to edit docs simultaneously.
+- Introduced custom brand color support—set your `{brandColor}` in config for themed previews.
+
+## Improvements
+
+- Enhanced search with fuzzy matching for faster results across all pages.
+- Optimized rendering performance by `>30%` for large documentation sites.
+
+## Bug Fixes
+
+- Fixed parsing errors with nested code blocks in MDX files.
+- Resolved anchor link issues in table of contents.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated Mermaid diagram support via code blocks (no JSX component needed).
+- Added `ParamField` and `ResponseField` components for API documentation.
+
+## Bug Fixes
+
+- Corrected frontmatter parsing for YAML with no blank lines.
+- Fixed escaping of special characters like `{` and `<` in prose.
+
+<CodeGroup tabs="JavaScript,Python">
+```javascript
+// New API example
+const docs = await webDeveloper.createPage({ title: 'New Doc' });
+```
+```python
+# New API example
+docs = web_developer.create_page(title="New Doc")
+```
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core MDX documentation engine with 15+ components like `Steps`, `Tabs`, and `Cards`.
+- YAML frontmatter validation and auto-parsing.
+
+## Breaking Changes
+
+- Updated component attribute syntax: strings now require double quotes only.
+
+</Update>
+
+## Upcoming Changes
+
+Stay tuned for these enhancements in future releases:
+
+<Columns cols={2}>
+  <Card title="AI-Powered Editing" icon="zap" href="#ai-editing">
+    Auto-generate docs from code comments.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Built-in Git integration for doc history.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="#analytics">
+    Track doc views and engagement.
+  </Card>
+</Columns>
+
+<Callout kind="info">
+  Follow [GitHub releases](https://github.com/web-developer/releases) for beta access.
+</Callout>
+
+## Migration Guide
+
+Upgrading to v1.2.0? Follow these steps to ensure smooth transition.
+
+<Steps>
+  <Step title="Backup Your Site" icon="database">
+    Export your current docs:
+
+````bash
+web-developer export --output ./backup
+````
+
+  </Step>
+  <Step title="Update Package" icon="package">
+    Install the latest version:
+
+````bash
+npm install web-developer@latest
+````
+
+  </Step>
+  <Step title="Review Config" icon="settings">
+    Update your `web-developer.config.js`:
+
+````javascript
+module.exports = {
+  brandColor: '#3B82F6',
+  components: { mermaid: true }
+};
+````
+
+  </Step>
+  <Step title="Test Locally" icon="play">
+    Run dev server and check for issues:
+
+````bash
+web-developer dev
+````
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  For breaking changes, see the [v1.0.0 release notes](#) above. Test in a staging environment first.
+</Callout>

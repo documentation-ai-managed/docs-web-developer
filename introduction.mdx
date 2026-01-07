@@ -1,0 +1,97 @@
+---
+title: Introduction to Web Developer
+description: Welcome to Web Developer, your default documentation space for organizing and managing all project documentation with ease and efficiency.
+---
+
+## Overview
+
+Web Developer provides a centralized space where you organize, manage, and collaborate on all your project documentation. You create structured docs, embed code examples, and customize layouts to fit your workflow. This platform streamlines documentation for web projects, from API references to user guides.
+
+## Key Features
+
+Discover the core capabilities that make Web Developer essential for your projects.
+
+<Columns cols={3}>
+  <Card title="Organized Spaces" icon="layout" href="#spaces">
+    Group docs into navigable spaces with hierarchical pages and search.
+  </Card>
+  <Card title="Rich Components" icon="components" href="#components">
+    Use interactive elements like tabs, steps, and code groups for engaging docs.
+  </Card>
+  <Card title="Custom Branding" icon="palette" href="#customization">
+    Apply your brand colors and themes effortlessly.
+  </Card>
+</Columns>
+
+## Benefits for Web Developers
+
+You gain efficiency by embedding live code previews, API examples, and diagrams directly in docs. Teams collaborate in real-time, reducing context-switching. Customization ensures your docs match your site's design, enhancing professionalism.
+
+<Tabs>
+  <Tab title="Solo Developers" icon="user">
+    Quickly build personal project docs with minimal setup.
+  </Tab>
+  <Tab title="Teams" icon="users">
+    Share editable spaces for collaborative maintenance.
+  </Tab>
+</Tabs>
+
+## Quick Start
+
+Get up and running in minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://app.webdeveloper.com/register`.
+  </Step>
+  <Step title="New Space" icon="plus">
+    Click "New Space" and name your project.
+  </Step>
+  <Step title="Add Pages" icon="file-plus">
+    Create your first page with the editor.
+  </Step>
+  <Step title="Customize" icon="settings">
+    Set brand color to `#3B82F6` in settings.
+  </Step>
+</Steps>
+
+## Navigation
+
+Navigate effortlessly with sidebar menus, search, and breadcrumbs. Use anchor links like `#key-features` for quick jumps.
+
+<Card title="Quick Links" icon="link" horizontal>
+  Explore [Quickstart](/quickstart), [Authentication](/authentication), and [Changelog](/changelog).
+</Card>
+
+## Customization
+
+Tailor your docs with brand colors. Update your config file:
+
+<CodeGroup tabs="JSON,YAML">
+  ```json
+  {
+    "theme": {
+      "primaryColor": "#3B82F6"
+    }
+  }
+  ```
+  ```yaml
+  theme:
+    primaryColor: "#3B82F6"
+  ```
+</CodeGroup>
+
+<Expandable title="Advanced Theming" default-open="false">
+  Override CSS variables for deeper customization:
+
+  ````css
+  :root {
+    --brand-primary: #3B82F6;
+    --brand-secondary: #1D4ED8;
+  }
+  ````
+</Expandable>
+
+<Callout kind="tip">
+  Start with the [Quickstart](/quickstart) guide next to build your first space.
+</Callout>

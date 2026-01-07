@@ -1,0 +1,161 @@
+---
+title: Quickstart Guide
+description: Get up and running with Web Developer by setting up your account and creating your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+<Callout kind="info">
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: A GitHub account for version control integration
+
+</Callout>
+
+## Step-by-Step Setup
+
+Follow these steps to create your account, set up a project, add your first document, and explore the dashboard.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+
+    Visit `https://dashboard.example.com/signup` and enter your details.
+
+    ```bash
+    # No CLI needed - use the web interface
+    ```
+
+    Verify your email to activate the account.
+
+  </Step>
+
+  <Step title="Set Up New Project" icon="plus">
+
+    From the dashboard, click **New Project**.
+
+    Enter project name: `My First Docs` and select **Documentation Space** template.
+
+  </Step>
+
+  <Step title="Add First Document" icon="file-plus">
+
+    In your project, click **New Document** and choose MDX format.
+
+    Add basic content like a title and description.
+
+  </Step>
+
+  <Step title="Explore Dashboard" icon="layout-dashboard">
+
+    Review sections: **Documents**, **Settings**, **Integrations**.
+
+    Customize your space theme with brand color `#3B82F6`.
+
+  </Step>
+</Steps>
+
+## Platform-Specific Installation Tips
+
+If integrating with your local development environment, use these commands based on your package manager.
+
+<Tabs>
+  <Tab title="npm" icon="package">
+
+````bash
+npm install web-developer-sdk
+````
+
+    Initialize your project:
+
+````javascript
+import { createDocsSpace } from 'web-developer-sdk';
+
+const space = createDocsSpace({
+  projectId: 'your-project-id',
+  apiKey: 'YOUR_API_KEY'
+});
+````
+
+  </Tab>
+
+  <Tab title="yarn" icon="package">
+
+````bash
+yarn add web-developer-sdk
+````
+
+    Same initialization applies.
+
+  </Tab>
+
+  <Tab title="pnpm" icon="package">
+
+````bash
+pnpm add web-developer-sdk
+````
+
+  </Tab>
+</Tabs>
+
+## Initial Configuration Tips
+
+<Columns cols={2}>
+  <Card title="API Integration" icon="zap" href="#api-config">
+
+    Connect to `https://api.example.com` for automated builds.
+
+  </Card>
+
+  <Card title="Custom Domain" icon="globe" href="#domain-setup">
+
+    Map your domain in project settings.
+
+  </Card>
+
+  <Card title="Version Control" icon="git-branch" href="/introduction">
+
+    Link to GitHub for seamless syncs.
+
+  </Card>
+
+  <Card title="Themes" icon="palette" href="#themes">
+
+    Apply `#3B82F6` as primary color.
+
+  </Card>
+</Columns>
+
+<CodeGroup tabs="MDX Example">
+
+```mdx
+---
+title: My First Page
+description: Welcome to my docs.
+---
+
+## Hello World
+
+This is your first MDX document!
+```
+
+</CodeGroup>
+
+<Expandable title="Advanced Config" default-open="false">
+
+Set environment variables for production:
+
+```bash
+export WEB_DEVELOPER_API_KEY=your-api-key-here
+export PROJECT_ID=your-project-id
+```
+
+</Expandable>
+
+<Callout kind="tip">
+
+Next, explore [authentication](/authentication) for secure API access or check the [changelog](/changelog) for updates.
+
+</Callout>

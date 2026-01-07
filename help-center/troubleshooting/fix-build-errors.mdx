@@ -1,0 +1,27 @@
+---
+title: Build Errors on Project Deploy
+description: Resolve build errors when deploying documentation projects.
+---
+
+## Symptoms
+
+- Build fails during deploy
+- Error: "Build process exited with code 1"
+
+## Causes
+
+- Missing dependencies
+- Incorrect build command
+
+## Quick Fix
+
+<Steps>
+  <Step title="Check dependencies">
+    ````bash
+    npm install
+    ````
+  </Step>
+  <Step title="Update build command">
+    Ensure the build command in your settings matches your project's configuration.
+  </Step>
+</Steps>
